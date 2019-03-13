@@ -13,7 +13,6 @@ import { switchMap, debounceTime, distinctUntilChanged, catchError, onErrorResum
 export class TopoComponent implements OnInit {
 
   public ofertas: Observable<Oferta[]>;
-  public ofertas2: Oferta[];
   private subjectPesquisa: Subject<string> = new Subject<string>();
 
   constructor(private ofertasService: OfertasService) { }
@@ -23,7 +22,6 @@ export class TopoComponent implements OnInit {
       .pipe(debounceTime(1000)) //executa a ação do switchMap após 1 segundo
       .pipe(distinctUntilChanged()) //para fazer pesquisas distintas
       .pipe(switchMap((termo: string) => {
-        console.log('requisição para api');
 
         if(termo.trim() === ''){
           //retornar um obervabele de array de ofertas vazio
@@ -33,14 +31,8 @@ export class TopoComponent implements OnInit {
         
       }))
     .pipe(catchError((err: any) => {
-        console.log(err);
         return of<Oferta[]>([]);
       }));
-
-      this.ofertas.subscribe((ofertas: Oferta[]) => {
-        console.log(ofertas)
-        this.ofertas2 = ofertas
-      })
   }
 /*
   public pesquisa (termoDaBusca: string): void{
@@ -56,8 +48,11 @@ export class TopoComponent implements OnInit {
   */
 
   public pesquisa(termoDaBusca: string): void {
-    console.log('keyup caracter: ', termoDaBusca);
     this.subjectPesquisa.next(termoDaBusca);
+  }
+
+  public limpaPesquisa(): void {
+    this.subjectPesquisa.next('');
   }
 
 }

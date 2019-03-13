@@ -1,5 +1,5 @@
 <div class="fixed-top">
-  <nav class="navbar navbar-light bg-faded">
+  <nav class="navbar navbar-dark bg-primary">
     <div class="container">
       <div class="row">
         <div class="col-md-4">
@@ -15,7 +15,11 @@
           (keyup)="pesquisa(termoDaPesquisa.value)"
           />
           <ul class="list-group" style="position: absolute">
-              <li class="list-group-item" *ngFor="let oferta of ofertas2">{{ oferta.titulo | descricaoReduzida:15 }}</li>
+              <li class="list-group-item" *ngFor="let oferta of ofertas | async">
+                <a [routerLink]="['/oferta', oferta.id]" (click) = "limpaPesquisa()">
+                  {{ oferta.titulo | descricaoReduzida:15 }}
+                </a>
+              </li>
             </ul>
 
         </div>
