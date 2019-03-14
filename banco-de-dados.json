@@ -241,6 +241,20 @@
       "complemento": "casa",
       "formaPagamento": "debito",
       "id": 8
+    },
+    {
+      "endereco": "Teste",
+      "numero": "10",
+      "complemento": "casa",
+      "formaPagamento": "dinheiro",
+      "id": 9
+    },
+    {
+      "endereco": "Teste final",
+      "numero": "12",
+      "complemento": "oi",
+      "formaPagamento": "debito",
+      "id": 10
     }
   ]
 }
