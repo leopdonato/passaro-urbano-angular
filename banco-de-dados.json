@@ -255,6 +255,20 @@
       "complemento": "oi",
       "formaPagamento": "debito",
       "id": 10
+    },
+    {
+      "endereco": "Expedicionarios",
+      "numero": "846",
+      "complemento": "casa",
+      "formaPagamento": "dinheiro",
+      "id": 11
+    },
+    {
+      "endereco": "Rui Barbosa",
+      "numero": "577",
+      "complemento": "casa",
+      "formaPagamento": "debito",
+      "id": 12
     }
   ]
 }
