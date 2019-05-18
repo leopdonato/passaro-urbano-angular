@@ -269,6 +269,61 @@
       "complemento": "casa",
       "formaPagamento": "debito",
       "id": 12
+    },
+    {
+      "endereco": "Rua 1 ",
+      "numero": "1",
+      "complemento": null,
+      "formaPagamento": "dinheiro",
+      "id": 13
+    },
+    {
+      "endereco": "Rua doistres",
+      "numero": "23",
+      "complemento": "sdsd",
+      "formaPagamento": "debito",
+      "items": [
+        {
+          "id": 2,
+          "img": {
+            "url": "/assets/ofertas/2/img1.jpg"
+          },
+          "titulo": "Cozinha Mexicana",
+          "descricaoOferta": "Almoço ou Jantar com Rodízio Mexicano delicioso.",
+          "valor": 32.9,
+          "quantidade": 3
+        },
+        {
+          "id": 5,
+          "img": {
+            "url": "/assets/ofertas/5/img1.jpg"
+          },
+          "titulo": "Kart",
+          "descricaoOferta": "Bateria de Kart de 30 minutos.",
+          "valor": 54.9,
+          "quantidade": 6
+        }
+      ],
+      "id": 14
+    },
+    {
+      "endereco": "sdsdsd",
+      "numero": "sdsdss",
+      "complemento": "sdsds",
+      "formaPagamento": "dinheiro",
+      "items": [
+        {
+          "id": 4,
+          "img": {
+            "url": "/assets/ofertas/4/img1.jpg"
+          },
+          "titulo": "Estância das águas",
+          "descricaoOferta": "Diversão garantida com piscinas, trilhas e muito mais.",
+          "valor": 31.9,
+          "quantidade": 2
+        }
+      ],
+      "id": 15
     }
   ]
 }

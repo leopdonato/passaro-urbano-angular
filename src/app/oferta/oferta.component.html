@@ -22,7 +22,7 @@
         </div>
 
         <div class="thumbnails">
-          <img *ngFor = "let imagem of oferta.imagens" [src]="imagem.url" />
+          <img *ngFor="let imagem of oferta.imagens" [src]="imagem.url" />
         </div>
       </div>
 
@@ -31,7 +31,7 @@
           <div class="col text-center">
             <p>Por apenas</p>
           </div>
-          
+
         </div>
 
         <div class="row">
@@ -42,30 +42,32 @@
 
         <div class="row">
           <div class="col text-center">
-            <button type="button" class="btn btn-warning btn-lg">Adicionar ao carrinho</button>
+            <button type="button" class="btn btn-warning btn-lg" (click)="adicionarItemCarrinho(oferta)">Adicionar ao
+              carrinho</button>
           </div>
         </div>
-          
+
       </div>
 
     </div>
 
   </div>
   <br /> <br />
-<div class = "row" style="margin-top: 25px; margin-bottom:150px">
-  <div class="col">
-    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-      <li class="nav-item">
-        <a class="nav-link active" routerLink="como-usar"  data-toggle="pill" role="tab" aria-selected="true">Como usar</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="onde-fica" data-toggle="pill"  role="tab" aria-selected="false">Onde fica</a>
-      </li>
-    </ul>
-    <div class="tab-content">
-      <router-outlet></router-outlet>
+  <div class="row" style="margin-top: 25px; margin-bottom:150px">
+    <div class="col">
+      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="como-usar" data-toggle="pill" role="tab" aria-selected="true">Como
+            usar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="onde-fica" data-toggle="pill" role="tab" aria-selected="false">Onde fica</a>
+        </li>
+      </ul>
+      <div class="tab-content">
+        <router-outlet></router-outlet>
+      </div>
     </div>
   </div>
-</div>
- 
+
 </div>
